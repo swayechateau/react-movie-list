@@ -182,3 +182,13 @@ a:hover {
   background: #121212;
   color: #fff;
 }
+.dark .no-results {
+  text-align: center;
+  background-image: linear-gradient(
+    to left,
+    white,
+    grey
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+}
