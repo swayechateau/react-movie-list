@@ -13,9 +13,6 @@ html, body {
 
 }
 
-body {
-  background: #121212;
-}
 
 h1,
 h2,
@@ -52,6 +49,7 @@ a:hover {
 
 .App {
   overflow-x: hidden;
+  height: 100vh;
 }
 
 /* grid styles */
