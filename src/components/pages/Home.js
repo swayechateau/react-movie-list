@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
 import GridList from "../GridList";
+import AppHeader from "../AppHeader";
+import AppMessage from "../AppMessage";
 class Main extends Component {
   constructor(props) {
     super(props);
@@ -8,6 +10,10 @@ class Main extends Component {
     this.state = {
       search: "",
       movies: [],
+      header: {
+        title: 'OMBD Search',
+        color: 'red-blue'
+      }
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -34,18 +40,21 @@ class Main extends Component {
   }
   render() {
     return (
-      <div className="App">
+      <div>
+        <AppHeader header={this.state.header}/>
         <input
           className="search-input"
           type="text"
-          placeholder="search for movie..."
+          placeholder="Search for movie..."
           onChange={this.handleChange}
           value={this.state.search}
         />
         <section className="App-Results">
           {this.state.movies ? (
             <GridList movies={this.state.movies} />
-          ) : (
+          ) : this.state.search === '' ? (
+            <AppMessage />
+          ):(
             <h1 className="no-results">No Results Found!</h1>
           )}
         </section>
