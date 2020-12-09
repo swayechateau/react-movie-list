@@ -1,0 +1,7 @@
+.app-message {
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 2rem;
+    background: rgba(255,255,255,0.3);
+}
