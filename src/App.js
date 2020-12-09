@@ -6,7 +6,7 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App dark">
       <Router>
         <Route exact path="/" component={Main} />
         <Route path="/:movieId" component={Movie} />
